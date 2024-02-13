@@ -13,5 +13,6 @@ module.exports = {
         })
         .then(files => res.status(200).json({code: 200, message: `Directory listing from ${parentDir || 'Root'}`, data: files}))
         .catch(error => res.status(500).json({code: 500, message: error.message}));
-    }
+    },
+    
 }
