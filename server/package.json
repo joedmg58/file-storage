@@ -1,0 +1,16 @@
+{
+  "name": "file-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "file-server.js",
+  "scripts": {
+    "start": "node file-server.js"
+  },
+  "author": "Joed Machado",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.7"
+  }
+}
