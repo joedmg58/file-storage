@@ -9,8 +9,11 @@
   "author": "Joed Machado",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2",
     "sequelize": "^6.37.0",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "uuidv4": "^6.2.13"
   }
 }

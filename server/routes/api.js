@@ -6,6 +6,13 @@ const defaultResponse = (req, res) => {
     res.status(200).json({code: 200, message: `Working on this route: /api${req.route.path}`});
 }
 
+apiRouter.use( (req, res, next) => {
+    const date = new Date();
+    console.log('Date: ', date, '| Query: ', req.method, '/api' + req.url, '| From: ', req.ip);
+
+    next();
+});
+
 apiRouter
     .route('/version')
     .get( (req, res) => {
@@ -30,8 +37,8 @@ apiRouter
     .get( fileController.listDir )      //get dir listing
 
 apiRouter
-    .route('/file/dir')
-    .post( defaultResponse )     //create a directory
+    .route('/file/dir/:dir(*)?')
+    .post( fileController.createDir )     //create a directory POST request body -> {name, path}
     .put( defaultResponse )      //change directory's name
     .delete( defaultResponse )    //delete a directory
 

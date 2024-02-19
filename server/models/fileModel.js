@@ -8,10 +8,11 @@ const File = db.define(
   {
     id: {
       type: DataTypes.UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
     name: {
-      type: DataTypes.STRING(255),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     date: {
@@ -23,7 +24,7 @@ const File = db.define(
       allowNull: false
     },
     parentDir: {
-        type: DataTypes.UUIDV4, //parent directory, if equals null menas that is root directory
+        type: DataTypes.STRING, //parent directory, if equals null means that is root directory
         allowNull: true
     },
   },

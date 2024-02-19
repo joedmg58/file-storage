@@ -20,3 +20,4 @@
 
 #server
 server/node_modules
+server/.env
